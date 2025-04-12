@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Project</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="flex flex-col lg:flex-row h-screen bg-cyan-100">
+
+    <!-- Mobile Sidebar Toggle Button -->
+    <button id="sidebarToggle" class="lg:hidden bg-blue-500 text-white px-4 py-2 rounded-md shadow-md m-4 self-start">
+        ☰ Menu
+    </button>
+
+    <!-- Sidebar -->
+    <aside id="sidebar" class="w-full lg:w-80 bg-cyan-100 shadow-md p-4 transition-transform transform lg:translate-x-0 hidden lg:block">
+        <a href="home.html" class="hover:text-gray-600 font-bold md:text-base">
+            Home
+        </a>
+        <h2 class="text-lg font-semibold m-2">Flood Map</h2>
+
+        <!-- River Gauges -->
+        <div class="mt-6 border-t pt-4">
+            <h3 class="text-md font-semibold flex items-center">
+                <i class="fa-solid fa-house-flood-water-circle-arrow-right" style="color: #74C0FC;"></i>
+                 River gauges</h3>
+            <ul class="mt-2 space-y-2">
+                <li class="flex items-center"><span class="inline-block w-4 h-4 bg-red-700 rounded-full mr-2"></span>Extreme Level</li>
+                <li class="flex items-center"><span class="inline-block w-4 h-4 bg-red-500 rounded-full mr-2"></span>Danger level</li>
+                <li class="flex items-center"><span class="inline-block w-4 h-4 bg-yellow-500 rounded-full mr-2"></span>Warning level</li>
+                <li class="flex items-center"><span class="inline-block w-4 h-4 bg-green-500 rounded-full mr-2"></span>Normal level</li>
+            </ul>
+        </div>
+
+        <!-- Inundation Probability -->
+        <div class="mt-6">
+            <h3 class="text-md font-semibold flex items-center">💧 Inundation probability</h3>
+            <ul class="mt-2 space-y-2">
+                <li class="flex items-center"><span class="inline-block w-4 h-4 bg-blue-500 rounded-full mr-2"></span>Very high</li>
+                <li class="flex items-center">🔷<span class="ml-2">High</span></li>
+                <li class="flex items-center">🔹<span class="ml-2">Moderate</span></li>
+            </ul>
+        </div>
+
+        <!-- Location Info -->
+        <div class="lg:mt-30 md:mt-10">
+            <p class="text-black text-lg">Location:</p>
+            <p class="text-gray-700 font-medium">India</p>
+            <p class="text-sm text-gray-500">River trend</p>
+            <p class="text-sm text-red-500">No flooding data found for this location.</p>
+            <p class="text-xs text-gray-400">Area too large for forecast</p>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col items-center p-4">
+        <!-- Heading with Map Toggle -->
+        <div class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4 mb-4">
+            <div class="flex border rounded-lg overflow-hidden">
+                <button id="mapView" class="px-4 py-2 bg-gray-500 text-white hover:bg-blue-500">Map</button>
+                <button id="hybridView" class="px-4 py-2 bg-gray-200 text-gray-800 hover:bg-blue-500">Hybrid</button>
+            </div>
+            <h1 class="text-2xl font-bold text-gray-800 text-center">
+                Flood Map
+            </h1>
+        </div>
+
+        <!-- Flood Map Image -->
+        <div class="w-full h-[70vh] sm:h-[80vh]">
+            <img id="mapImage" src="roll14/flood.jpeg" alt="Flood Map" class="w-full h-full object-contain">
+        </div>
+    </main>
+
+    <script>
+        // Sidebar Toggle for Mobile
+        const sidebar = document.getElementById("sidebar");
+        const sidebarToggle = document.getElementById("sidebarToggle");
+
+        sidebarToggle.addEventListener("click", () => {
+            sidebar.classList.toggle("hidden");
+        });
+         // Map & Hybrid Toggle
+         const mapBtn = document.getElementById("mapView");
+        const hybridBtn = document.getElementById("hybridView");
+        const mapImage = document.getElementById("mapImage");
+
+        mapBtn.addEventListener("click", () => {
+            mapImage.src = "roll14/flood.jpeg"; // Default map image
+            mapBtn.classList.add("bg-blue-500", "text-white");
+            hybridBtn.classList.remove("bg-blue-500", "text-white");
+            hybridBtn.classList.add("bg-gray-200", "text-gray-800");
+        });
+
+        hybridBtn.addEventListener("click", () => {
+            mapImage.src = "roll14/floodhybrid.jpeg"; // Hybrid map image (replace with actual hybrid image)
+            hybridBtn.classList.add("bg-blue-500", "text-white");
+            mapBtn.classList.remove("bg-blue-500", "text-white");
+            mapBtn.classList.add("bg-gray-200", "text-gray-800");
+        });
+    </script>
+
+</body>
+</html>

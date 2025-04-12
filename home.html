@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management of Material During Disaster</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-cyan-100">
+
+    <!-- Header -->
+    <header class="bg-green-600 text-green-100 py-1 sticky top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <div><img src="home/logo.jpg" alt="" class="h-14 w-14 rounded-full object-cover"></div>
+            <h1 class="text-2xl font-bold">Disaster Material Management</h1>
+            <nav class="flex space-x-6">
+                <a href="contact.php" class="hover:underline hover:text-green-200 font-bold text-gray-200">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content (Placeholder) -->
+    <main class="container mx-auto my-10 px-6">
+        <h2 class="text-3xl text-center font-semibold text-blue-900">Welcome to Disaster Material Management</h2>
+        <p class="text-gray-600 mt-2 text-center">
+            This system helps track the receipt, availability, movement, and distribution of materials during disasters.
+        </p>
+        <p class="text-center">Disasters, whether natural or man-made, cause widespread devastation, 
+            leaving communities in urgent need of essential supplies. <br>
+            Proper management of materials during such crises plays a vital 
+            role in ensuring swift relief and recovery.<br> This process involves 
+            the receipt, availability, movement, and final distribution of resources to those in need.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+            <!-- Movement of Materials -->
+            <div class="bg-white pt-0 px-0 pb-6 text-center text-lg font-semibold rounded-lg shadow-md 
+                    transition-all duration-300 hover:scale-105 hover:bg-green-200 hover:shadow-lg overflow-hidden">
+                <img src="images/MovementOfMaterials.jpg" alt="Movement of Materials" 
+                     class="w-full h-50 object-cover rounded-t-lg">
+                <p class="text-orange-500 mt-3">
+                    <a href="movementOfMaterial.php">Movement of Materials</a>
+                </p>
+            </div>
+    
+            <!-- Distribution to Last Person -->
+            <div class="bg-white pt-0 px-0 pb-6 text-center text-lg font-semibold rounded-lg shadow-md 
+                    transition-all duration-300 hover:scale-105 hover:bg-green-200 hover:shadow-lg overflow-hidden">
+  
+                <img src="images/DistributiontoLastPerson.jpg" alt="Distribution to Last Person" 
+                    class="w-full h-50 object-cover rounded-t-lg">
+  
+                <p class="text-orange-500 mt-3">
+                <a href="distribution.php">Distribution to Last Person</a>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
+
+            <!-- Maps Heading (Full Width) -->
+            <div class="col-span-full font-bold text-3xl text-center text-blue-700">
+                <i class="fa-solid fa-map-location-dot" style="color: #74C0FC;"></i> Maps
+            </div>
+        
+            <!-- Map Categories -->
+            <div class="bg-blue-300 p-6 text-center text-lg font-semibold rounded-lg shadow-md 
+                        transition-all duration-300 hover:scale-105 hover:bg-blue-400 hover:shadow-lg">
+                        <i class="fa-solid fa-house-flood-water-circle-arrow-right" style="color: #08eb8c;"></i> 
+                        <a href="flood.html" class="hover:text-gray-300">Flood </a>
+            </div>
+            <div class="bg-blue-300 p-6 text-center text-lg font-semibold rounded-lg shadow-md 
+                        transition-all duration-300 hover:scale-105 hover:bg-blue-400 hover:shadow-lg">
+                        <i class="fa-solid fa-bolt-lightning" style="color: #08eb8c;"></i> 
+                        <a href="lightning.html" class="hover:text-gray-300">Lightning </a>
+            </div>
+            <div class="bg-blue-300 p-6 text-center text-lg font-semibold rounded-lg shadow-md 
+                        transition-all duration-300 hover:scale-105 hover:bg-blue-400 hover:shadow-lg">
+                        <i class="fa-solid fa-mountain-sun" style="color: #08eb8c;"></i>
+                        <a href="landslide.html" class="hover:text-gray-300">Landslide </a>
+            </div>
+            <div class="bg-blue-300 p-6 text-center text-lg font-semibold rounded-lg shadow-md 
+                        transition-all duration-300 hover:scale-105 hover:bg-blue-400 hover:shadow-lg">
+                        <i class="fa-solid fa-house-chimney-crack" style="color: #08eb8c;"></i> 
+                        <a href="earthquake.html" class="hover:text-gray-300">Earthquake </a>
+            </div>
+            <div class="bg-blue-300 p-6 text-center text-lg font-semibold rounded-lg shadow-md 
+                        transition-all duration-300 hover:scale-105 hover:bg-blue-400 hover:shadow-lg">
+                        <i class="fa-solid fa-hand-holding-droplet" style="color: #08eb8c;"></i>
+                        <a href="drought.html" class="hover:text-gray-300">Drought </a>
+            </div>
+            <div class="bg-blue-300 p-6 text-center text-lg font-semibold rounded-lg shadow-md 
+                        transition-all duration-300 hover:scale-105 hover:bg-blue-400 hover:shadow-lg">
+                        <i class="fa-solid fa-tornado" style="color: #08eb8c;"></i>
+                        <a href="cyclone.html" class="hover:text-gray-300">Cyclone </a>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
+    
+            <!-- Warning Heading (Full Width) -->
+            <div class="col-span-full font-bold text-3xl text-center text-red-700 flex justify-center">
+                <i class="fa-solid fa-triangle-exclamation" style="color: #FFD43B;"></i> Warning
+            </div>
+        
+            <!-- Warning Cards -->
+            <div class="bg-green-300 p-6 text-center text-lg font-semibold rounded-lg shadow-md 
+                        transition-all duration-300 hover:scale-105 hover:bg-green-400">
+                        <i class="fa-solid fa-cloud-showers-water" style="color: #1692f1;"></i>
+                        <a href="warningrainfall.html">Heavy Rainfall</a>
+            </div>
+            <div class="bg-green-300 p-6 text-center text-lg font-semibold rounded-lg shadow-md 
+                        transition-all duration-300 hover:scale-105 hover:bg-green-400">
+                        <i class="fa-solid fa-house-tsunami" style="color: #1692f1;"></i> 
+                        <a href="warningtsunami.html">Tsunami</a>
+            </div>
+            <div class="bg-green-300 p-6 text-center text-lg font-semibold rounded-lg shadow-md 
+                        transition-all duration-300 hover:scale-105 hover:bg-green-400">
+                        <i class="fa-solid fa-house-flood-water-circle-arrow-right" style="color: #1692f1;"></i> 
+                        <a href="warningflood.html">Flood</a>
+            </div>
+            <div class="bg-green-300 p-6 text-center text-lg font-semibold rounded-lg shadow-md 
+                        transition-all duration-300 hover:scale-105 hover:bg-green-400">
+                        <i class="fa-solid fa-house-flood-water" style="color: #1692f1;"></i> 
+                        <a href="warningdamlevel.html">Dam Level</a>
+            </div>
+            <div class="bg-green-300 p-6 text-center text-lg font-semibold rounded-lg shadow-md 
+                        transition-all duration-300 hover:scale-105 hover:bg-green-400">
+                        <i class="fa-solid fa-triangle-exclamation" style="color: #ebaf16;"></i> 
+                        <a href="warningfisherman.html">Fisherman Warning</a>
+            </div>
+            <div class="bg-green-300 p-6 text-center text-lg font-semibold rounded-lg shadow-md 
+                        transition-all duration-300 hover:scale-105 hover:bg-green-400">
+                        <i class="fa-solid fa-bolt-lightning" style="color: #1692f1;"></i> 
+                        <a href="warninglightning.html">Lightning</a>
+            </div>
+            <div class="bg-green-300 p-6 text-center text-lg font-semibold rounded-lg shadow-md 
+                        transition-all duration-300 hover:scale-105 hover:bg-green-400">
+                        <i class="fa-solid fa-tornado" style="color: #1692f1;"></i> 
+                        <a href="warningcyclone.html">Cyclone</a>
+            </div>
+            <div class="bg-green-300 p-6 text-center text-lg font-semibold rounded-lg shadow-md 
+                        transition-all duration-300 hover:scale-105 hover:bg-green-400">
+                        <i class="fa-solid fa-house-chimney-crack" style="color: #1692f1;"></i> 
+                        <a href="warningearth.html">Earthquake</a>
+            </div>
+        
+        </div>
+
+         <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-6 p-6">
+    
+            <!-- Know More Heading (Full Width) -->
+            <div class="col-span-full font-bold text-3xl text-center text-red-700 flex justify-center">
+                <!-- <img src="knowMore1.jpg" alt="warning" class="w-8 h-8">--> <p class="bg-blue-500 text-white pr-3 pl-3 mr-2 rounded-lg">i</p> Know More 
+            </div>
+        
+            <!-- Information Cards -->
+            <div class="bg-red-300 p-6 text-center text-lg font-semibold rounded-lg shadow-md 
+                        transition-all duration-300 hover:scale-105 hover:bg-red-400 hover:shadow-lg">
+                        <i class="fa-solid fa-truck-medical" style="color: #8e6cf1;"></i>
+                        <a href="emergency.html">Emergency Resources</a>
+                         
+            </div>
+            <div class="bg-red-300 p-6 text-center text-lg font-semibold rounded-lg shadow-md 
+                        transition-all duration-300 hover:scale-105 hover:bg-red-400 hover:shadow-lg">
+                        <i class="fa-solid fa-kit-medical" style="color: #8e6cf1;"></i>
+                        <a href="firstAid.html">First Aid</a>
+                        
+            </div>
+            <div class="bg-red-300 p-6 text-center text-lg font-semibold rounded-lg shadow-md 
+                        transition-all duration-300 hover:scale-105 hover:bg-red-400 hover:shadow-lg">
+                        <i class="fa-solid fa-exclamation" style="color: #8e6cf1;"></i>
+                        <a href="precaution.html">Precautions</a>              
+            </div>       
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-green-700 text-white px-8 py-10">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
+          
+          <!-- Left Section -->
+          <div>
+            <h2 class="text-xl font-bold mb-2">DisasterGuard</h2>
+            <div class="h-0.5 w-8 bg-white mb-4"></div>
+            <p>Comprehensive natural disaster management solutions to protect communities and 
+                save lives through technology and preparedness.</p>
+          </div>
+      
+          <!-- Middle Section -->
+          <div>
+            <h2 class="text-xl font-bold mb-2">Quick Links</h2>
+            <div class="h-0.5 w-8 bg-white mb-4"></div>
+            <ul class="space-y-2">
+                <li><a href="about_us.html" class="hover:underline">About Us</a></li>
+                <li><a href="service.html" class="hover:underline">Our Services</a></li>
+                <li><a href="privacy.html" class="hover:underline">Privacy Policy</a></li>
+                <li><a href="faq.html" class="hover:underline">FAQ</a></li>
+              </ul>
+          </div>
+      
+          <!-- Right Section -->
+          <div>
+            <h2 class="text-xl font-bold mb-2">Contact Us</h2>
+            <div class="h-0.5 w-8 bg-white mb-4"></div>
+            <ul class="space-y-2">
+                <li><span class="inline-block mr-2">
+                    <i class="fas fa-envelope mt-1 mr-2"></i>
+                    </span> info@disasterguard.org</li>
+              <li><span class="inline-block mr-2">
+                <i class="fas fa-phone-alt mt-1 mr-2"></i>
+                </span> +1 (800) 555-1967</li>
+              <li><span class="inline-block mr-2">
+                <i class="fas fa-exclamation-triangle mt-1 mr-2"></i>
+                </span> Emergency Hotline: +1 (800) 555-9111</li>
+                <li><span class="inline-block mr-2">
+                    <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
+              </span> 123 Safety Ave, Resilience City</li>
+            </ul>
+          </div>
+      
+        </div>
+      
+        <!-- Bottom line -->
+        <div class="border-t border-green-600 mt-8 pt-4 text-center text-sm text-white">
+            &copy; 2025 Disaster Material Management. All Rights Reserved.
+        </div>
+      </footer>
+    
+
+</body>
+</html>

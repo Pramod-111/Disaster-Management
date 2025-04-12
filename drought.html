@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link href="./output.css" rel="stylesheet"> -->
+</head>
+<body class="flex flex-col lg:flex-row h-screen bg-orange-100">
+
+    <!-- Mobile Sidebar Toggle Button -->
+    <button id="sidebarToggle" class="lg:hidden bg-blue-500 text-white px-4 py-2 rounded-md shadow-md m-4 self-start">
+        ☰ Menu
+    </button>
+
+    <!-- Sidebar -->
+    <aside id="sidebar" class="w-full lg:w-80 bg-gray-900 shadow-md p-4 transition-transform transform lg:translate-x-0 hidden lg:block">
+        <a href="home.html" class="text-white hover:text-gray-300 font-bold md:text-base">
+            Home
+        </a>
+        <h2 class="text-lg font-semibold text-white m-2">Drought Map</h2>
+
+        <!-- River Gauges -->
+        <div class="mt-6 border-t pt-4">
+            <h3 class="text-md font-semibold flex items-center text-white">
+                🌊 Drought:
+            </h3>
+            <ul class="mt-2 space-y-2">
+                <li class="flex items-center text-white"><span class="inline-block w-4 h-4 bg-red-800 rounded-full mr-2"></span>Exceptional Level</li>
+                <li class="flex items-center text-white"><span class="inline-block w-4 h-4 bg-red-600 rounded-full mr-2"></span>Extreme level</li>
+                <li class="flex items-center text-white"><span class="inline-block w-4 h-4 bg-yellow-600 rounded-full mr-2"></span>Severe level</li>
+                <li class="flex items-center text-white"><span class="inline-block w-4 h-4 bg-amber-400 rounded-full mr-2"></span>Moderate level</li>
+                <li class="flex items-center text-white"><span class="inline-block w-4 h-4 bg-yellow-300 rounded-full mr-2"></span>Abnormal level</li>
+                <li class="flex items-center text-white"><span class="inline-block w-4 h-4 bg-white rounded-full mr-2"></span>Normal level</li>
+            </ul>
+        </div>
+
+        <!-- Location Info -->
+        <div class="lg:mt-54 md:mt-10 sm:mt-10">
+            <p class="text-white text-lg">Location:</p>
+            <p class="text-white font-medium">India</p>
+            <p class="text-sm text-white">Drought trend</p>
+            <p class="text-sm text-red-500">Drought data found for this location.</p>
+            <p class="text-xs text-gray-400">Area too large for forecast</p>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col items-center p-4">
+        <!-- Heading with Map Toggle -->
+        <div class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4 mb-4">
+            <div class="flex border rounded-lg overflow-hidden">
+                <button id="mapView" class="px-4 py-2 bg-gray-500 text-white hover:bg-blue-500">Map</button>
+                <button id="hybridView" class="px-4 py-2 bg-gray-200 text-gray-800 hover:bg-blue-500">Hybrid</button>
+            </div>
+            <h1 class="text-2xl font-bold text-gray-800 text-center">
+                Drought Map
+            </h1>
+        </div>
+
+        <!-- Flood Map Image -->
+        <div class="w-full h-[70vh] sm:h-[80vh]">
+            <img id="mapImage" src="roll14/drought.jpeg" alt="drought Map" class="w-full h-full object-contain">
+        </div>
+    </main>
+
+    <script>
+        // Sidebar Toggle for Mobile
+        const sidebar = document.getElementById("sidebar");
+        const sidebarToggle = document.getElementById("sidebarToggle");
+
+        sidebarToggle.addEventListener("click", () => {
+            sidebar.classList.toggle("hidden");
+        });
+         // Map & Hybrid Toggle
+         const mapBtn = document.getElementById("mapView");
+        const hybridBtn = document.getElementById("hybridView");
+        const mapImage = document.getElementById("mapImage");
+
+        mapBtn.addEventListener("click", () => {
+            mapImage.src = "roll14/drought.jpeg"; // Default map image
+            mapBtn.classList.add("bg-blue-500", "text-white");
+            hybridBtn.classList.remove("bg-blue-500", "text-white");
+            hybridBtn.classList.add("bg-gray-200", "text-gray-800");
+        });
+
+        hybridBtn.addEventListener("click", () => {
+            mapImage.src = "roll14/hybriddrought.jpeg"; // Hybrid map image (replace with actual hybrid image)
+            hybridBtn.classList.add("bg-blue-500", "text-white");
+            mapBtn.classList.remove("bg-blue-500", "text-white");
+            mapBtn.classList.add("bg-gray-200", "text-gray-800");
+        });
+    </script>
+
+</body>
+</html>

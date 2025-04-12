@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warning Systems</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-400 bg-opacity-80 font-sans">
+
+    <header class="bg-gray-700 text-white py-4 px-6 flex justify-between sticky top-0 z-10">  
+        <a href="home.html" class="hover:text-gray-300 font-bold md:text-base">
+            Home
+        </a>
+        <div class="text-2xl font-bold w-[65%]">Earthquake Warning System</div>
+    </header>
+
+    <div class="max-w-6xl mx-auto text-center space-y-4 mt-16">
+        <h1 class="text-4xl font-extrabold">Earthquake Warning System</h1>
+        <p class="text-lg">Earthquake warning systems detect seismic activity and send alerts before strong shaking occurs.
+             Using sensors and GPS data, they provide crucial seconds to minutes for safety measures, helping reduce damage and save lives.
+        </p>
+    </div>
+
+    <div class="mt-12 text-center">
+        <p class="text-red-600 font-extrabold text-2xl flex items-center justify-center animate-pulse">
+            <span class="text-yellow-500 text-3xl mr-2">⚠</span> Warning Systems:
+        </p>
+    </div>
+
+    <div class="text-gray-900 mt-10 grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <!-- 1st device -->
+        <div class="bg-blue-200 text-center p-8 rounded-xl shadow-lg hover:scale-105 transition-transform">
+            <div class="bg-blue-300 p-6 rounded-lg shadow-inner">
+                <img src="roll14/ear1.jpeg" alt="seismometer" class="mx-auto h-32 w-28">
+                <h2 class="font-bold text-xl mt-4">Seismometer</h2>
+            </div>
+            <ul class="list-disc text-left pl-6 mt-2">
+                <li class="mb-1.5"><span class="underline font-medium">Detects Ground Motion:</span> A seismometer measures vibrations caused by seismic waves during an earthquake.</li>
+                <li class="mb-1.5"><span class="underline font-medium">Records Earthquake Data:</span> It helps determine the earthquake's magnitude, depth, and location.</li>     
+                <li class="mb-1.5"><span class="underline font-medium">Supports Early Warning Systems:</span> Seismometers provide real-time data to issue alerts before strong shaking occurs.</li>
+                <li><span class="underline font-medium">Used in Research & Monitoring:</span> Scientists use seismometers to study tectonic activity and predict future earthquakes.</li>
+            </ul>
+        </div>
+
+        <!-- 2nd device -->
+        <div class="bg-green-200 text-center p-8 rounded-xl shadow-lg hover:scale-105 transition-transform">
+            <div class="bg-green-300 p-6 rounded-lg shadow-inner">
+                <img src="roll14/ear2.jpeg" alt="sensor" class="mx-auto h-32 w-28">
+                <h2 class="font-bold text-xl mt-4">Earthquake Detecting Sensor</h2>
+            </div>
+            <ul class="list-disc text-left pl-6 mt-2">
+                <li class="mb-1.5"><span class="underline font-medium">Seismic Detection:</span> The device continuously monitors ground motion to detect early seismic activity.</li>
+                <li class="mb-1.5"><span class="underline font-medium">Real-Time Alerts:</span> It provides warnings before strong shaking occurs, allowing people to take precautions.</li>     
+                <li class="mb-1.5"><span class="underline font-medium">Data Analysis:</span> The system analyzes seismic waves to estimate the earthquake's intensity and impact.</li>
+                <li><span class="underline font-medium">Disaster Mitigation:</span> Helps reduce damage and casualties by enabling quick response measures.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
